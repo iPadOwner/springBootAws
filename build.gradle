@@ -26,6 +26,7 @@ dependencies {
 
     // lombok
     implementation('org.projectlombok:lombok')
+    implementation 'junit:junit:4.13.1'
     annotationProcessor('org.projectlombok:lombok')
     testImplementation('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
@@ -38,5 +39,5 @@ dependencies {
 //    implementation('org.springframework.session:spring-session-jdbc') // 권한 관련
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
-//    testImplementation("org.springframework.security:spring-security-test") // 권한 관련
+    testImplementation("org.springframework.security:spring-security-test") // 권한 관련
 }
