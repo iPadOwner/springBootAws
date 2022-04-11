@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 모든 Entity의 상위 클래스가 되어 Entity들의
 cretedDate, modifiedDate를 자동으로 관리
 (ex : Posts Entity 클래스등이 상속함)
+Application.java에 JPA Auditing을 활성화 해줘야함(@EnableJpaAuditing)
  */
 @Getter
 @MappedSuperclass//JPA Entity들이 BaseTimeEntity를 상속할 경우 필드들(createdDate,modifiedDate)도 칼럼으로 인식하도록 함
