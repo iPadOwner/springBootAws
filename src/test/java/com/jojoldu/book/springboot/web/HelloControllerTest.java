@@ -49,5 +49,12 @@ public class HelloControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is(hello)))
                 .andExpect(jsonPath("$.amount", is(amount)));
+
+//        mvc.perform(get("/hello/dto")
+//                        .param("name",hello)
+//                        .param("amount",String.valueOf(amount)))
+//                .andExpect(status().isOk())
+//                .andExpect(jsonPath("$.name", is(hello)))
+//                .andExpect(jsonPath("$.amount", is(amount)));
     }
 }
