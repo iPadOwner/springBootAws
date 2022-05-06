@@ -17,10 +17,14 @@ import static org.hamcrest.Matchers.is;
 @RunWith(SpringRunner.class)
 @WebMvcTest(controllers = HelloController.class,
             //Spring Security 적용을 위한 부분
-            excludeFilters={
-                @ComponentScan.Filter(type= FilterType.ASSIGNABLE_TYPE,
+            /*excludeFilters={
+                @ComponentScan.Filter(type= FilterType.ANNOTATION,
                                         classes= SecurityConfig.class)
-            })
+            })*/
+            excludeFilters={
+            @ComponentScan.Filter(type= FilterType.ASSIGNABLE_TYPE,
+                    classes= SecurityConfig.class)
+                        })
 public class HelloControllerTest {
 
     @Autowired
